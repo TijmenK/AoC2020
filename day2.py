@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Dec  2 09:18:26 2020
-
-@author: tijme
-"""
-
 import pandas as pd
 raw_df = pd.read_csv("day2_input.txt", header=None)
 
