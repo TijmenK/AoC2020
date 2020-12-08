@@ -32,10 +32,14 @@ print(q_checker(q))
 # part2
 for index, line in enumerate(q):
     if line[0] == "jmp":
-        q_variation = list()
-        for line in q:
-            q_variation.append([line[0], line[1]])
-        q_variation[index][0] = "nop"
-        outcome = q_checker(q_variation)
+        q[index][0] = "nop"
+        outcome = q_checker(q)
         if outcome[5] != "1":
             print(outcome)
+        q[index][0] = "jmp"
+    elif line[0] == "nop":
+        q[index][0] = "jmp"
+        outcome = q_checker(q)
+        if outcome[5] != "1":
+            print(outcome)
+        q[index][0] = "nop"
