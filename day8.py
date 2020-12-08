@@ -4,7 +4,7 @@
 q = [line.rstrip().split(" ") for line in open("day8_input.txt")]
 
 def q_checker(q_variation):
-    iterator = -1
+    iterator = 0
     position = 0
     accumulator = 0
     previousIns = {}
