@@ -11,7 +11,6 @@ def findNumber(preAmble, q):
         for key in searchDict:
             if value - key in searchDict:
                 found = True
-            if found:
                 break
         if found == False:
             return(value)
