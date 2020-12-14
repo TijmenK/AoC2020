@@ -1,7 +1,8 @@
 import re
 instructions = [line.rstrip().split(" = ") for line in open("day14_input.txt")]
-mem = [0] * 100000
 mask = ""
+
+mem = [0] * 100000
 
 def bitmask(value, mask):
     for idx, char in enumerate(mask[::-1]):
@@ -20,12 +21,10 @@ for line in instructions:
         value = int(line[1])
         mem[int(memloc)] = bitmask(value, mask)
 
-memSum = 0
-for value in mem:
-    memSum+= value
+print("Part 1 answer: " + str(sum(mem)))
 
-print("Part 1 answer: " + str(memSum))
 memdict = {}
+
 def bitmask2(value, mask):
     bitString = ""
     for idx, char in enumerate(mask[::-1]):
