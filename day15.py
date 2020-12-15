@@ -16,7 +16,6 @@ def nextNumber(number, index, memDict):
         memDict[number] = [index]
         return(0)
 
-
 while index < 30000000 -1:
     lastNumber = nextNumber(lastNumber, index, memoryDict)
     index+=1
