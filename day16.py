@@ -28,6 +28,7 @@ print("Part 1 answer: " + str(errorRate))
 rulePosition = {}
 for rule in rules:
     rulePosition[rule] = []
+
 for i in range(len(rules)):
     for rule in rules:
         if all(ticket[i] in rules[rule][0] or ticket[i] in rules[rule][1] for ticket in validTickets):
@@ -52,4 +53,4 @@ part2 = 1
 for key in [x for x in ticketPosition.keys() if x.startswith('departure')] :
     part2 *= myTicket[ticketPosition[key]]
     
-print("Part 1 answer: " + str(part2))
+print("Part 2 answer: " + str(part2))
