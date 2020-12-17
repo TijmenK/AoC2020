@@ -53,7 +53,7 @@ print("Part 1 answer is: "+ str(str(startCube).count('1')))
 
 startCube2 = [[[[1 if char == '#' else 0 for char in line.rstrip()] for line in open("day17_input.txt")] for k in range(1)] for l in range(1)]
 
-def checkAdjacent2(z, y, x, w, shiftCube):
+def checkAdjacent2(w, z, y, x, shiftCube):
     wi = len(shiftCube[0][0][0])
     h = len(shiftCube[0][0])
     d = len(shiftCube[0])
@@ -90,7 +90,7 @@ def tick2(Cube):
         for zIDX, Z in enumerate(W):
             for yIDX, Y in enumerate(Z):
                 for xIDX, X in enumerate(Y):
-                    newCube[wIDX][zIDX][yIDX][xIDX] = checkAdjacent2(zIDX, yIDX, xIDX,wIDX, shiftCube)
+                    newCube[wIDX][zIDX][yIDX][xIDX] = checkAdjacent2(wIDX, zIDX, yIDX, xIDX, shiftCube)
     return(newCube)
 
 for i in range(6):
