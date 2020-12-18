@@ -1,14 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec  3 10:39:59 2020
-
-@author: tijme
-"""
-
-
-with open("day3_input.txt") as textFile:
+with open("day03_input.txt") as textFile:
         lines = textFile.readlines()
-
+# lines = [[1 if char == '#' else 0 for char in line.rstrip()] for line in open("day03_input.txt")]
 linelength = len(lines[0]) - 1
 steppedlines = []
 
@@ -42,6 +34,7 @@ def slopeChecker (slope):
     treeCounter = 0;
     
     for index, step in enumerate(lines):
+        print(step)
         if index % verticalStep == 0:
             if step[xCounter%linelength] == '#':
                 treeCounter = treeCounter + 1

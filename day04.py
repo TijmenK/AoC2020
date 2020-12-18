@@ -5,7 +5,7 @@ passKeys = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid','cid']
 passDict = dict.fromkeys(passKeys)
 passString = ''
 
-with open("day4_input.txt", "r") as a_file:
+with open("day04_input.txt", "r") as a_file:
   for line in a_file:
     stripped_line = line.strip()
     if stripped_line == "":
